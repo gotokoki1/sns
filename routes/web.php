@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\TimelineController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/timeline', 'Auth\TimelineController@showTimelinePage');
+Route::get('/timeline', [TimelineController::class, 'show']);
 Route::post('/timeline', 'Auth\TimelineController@postTweet');
+

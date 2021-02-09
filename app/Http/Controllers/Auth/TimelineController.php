@@ -7,5 +7,13 @@ use Illuminate\Http\Request;
 
 class TimelineController extends Controller
 {
-    //
+    public function show()
+    {
+        return view('auth.timeline'); 
+    }
+
+    public function postTweet(Request $request) 
+    {
+
+    }
 }
