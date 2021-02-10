@@ -22,6 +22,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/timeline', [TimelineController::class, 'show']);
-Route::post('/timeline', 'Auth\TimelineController@postTweet');
+Route::get('/timeline', [TimelineController::class, 'showTimelinePage']);
+Route::post('/timeline', [TimelineController::class, 'postTweet']);
 
