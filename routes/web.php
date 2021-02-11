@@ -14,14 +14,14 @@ use App\Http\Controllers\Auth\TimelineController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/timeline', [TimelineController::class, 'showTimelinePage']);
+Route::get('/', [TimelineController::class, 'showTimelinePage']);
 Route::post('/timeline', [TimelineController::class, 'postTweet']);
 
